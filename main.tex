@@ -1,0 +1,309 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{parcolumns}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Eric}{Roseren}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Address: 33 Rue Jules Wilhelm}{Luxembourg city}{Luxembourg}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+\extrainfo{Nationality: French, Luxembourgish}
+%\extrainfo{Date of birth: 21/07/1993} 
+% optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\vspace{-20mm}
+\quote{\textbf{Position: Machine Learning Researcher}}                               % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-5mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+  \faEnvelopeO\enspace eroseren1@gmail.com
+  %\faGithub\enspace github.com/ErRos2107 
+  &\href{https://www.linkedin.com/in/eric-roseren/}{\faLinkedinSquare\enspace eric-roseren}
+  &  \faMobile\enspace +352 661771235 \\  
+\end{tabular}
+\end{center}
+%------------------------------------------------------------
+%------------------------------------------------------------
+\section{EDUCATION}
+{\customcventry{November 2018}{Master of Science in Statistics and Data Science with Merit}{University of Edinburgh}{Edinburgh, United Kingdom}{}{}}
+
+{\customcventry{July 2016}{Bachelor of Science in Mathematics with First Class Honours}{University of Southampton}{Southampton, United Kingdom}{}{}}
+
+{\customcventry{July 2014}{Diploma of Higher Education in Chemistry with Second Class Honours}{University of Southampton}{Southampton, United Kingdom}{}{}}
+%
+%------------------------------------------------------------
+%------------------------------------------------------------
+%
+\section{WORK EXPERIENCE}
+%
+{\customcventry{June 2019 - }{Machine Learning Researcher}{Luxembourg Institute of Science and Technology (LIST)}{Esch-Belval, Luxembourg}{}
+{\begin{itemize}
+ \itemsep0.5em 
+  \item Contributed on generating new ideas, concepts, models and solutions for digital transformation projects.
+%
+  \item Build Extraction, Transformation and Loading (ETL) pipelines for various sources of data  to simplify re-training of predictive models.
+  \item Implemented parametric and non-parametric methods applied to raw industrial data for the optimisation of manufacturing processes. 
+  %
+  \item Presented analyses and results via interactive Shiny dashboards. Deployed prediction model in production using simple FLASK API. 
+  %
+  \item Gained significance experience in cloud computing functionalities via professional training from IBM. Responsible of testing and validating LIST's private cloud platform. 
+\end{itemize}
+}
+\vspace{0.3cm}
+
+%
+%------------------------------------------------------------
+%------------------------------------------------------------
+%
+\section{INDEPENDENT RESEARCH PROJECTS}
+%
+{\customcvproject{Consultancy project: \textit{Liver cancer: Investigating the risk factors}}{July 2017 - August 2017}
+{\begin{itemize}
+  \itemsep0.5em 
+  \item Analyzed data in R from 2000 patients with repetitive measurements over 10 years, totalling over 20000 samples.
+  \item  Developed a statistical model to estimate the survival rate of patients with liver cancer.
+  \item Implemented Markov Chain Monte Carlo algorithms using statistical softwares. 
+  \item Gained practical experience in extracting, cleaning and analysing longitudinal healthcare data.
+\end{itemize}
+}
+}
+\vspace{0.5cm}
+{\customcvproject{Consultancy project: \textit{Discovering Conflict Patterns}}{June 2017 – July 2017}
+  {\begin{itemize}
+    \itemsep0.5em
+    \item Identified best predictors of conflicts from the Armed Conflict Location Event Data (ACLED) and World Bank's data indicators. Built an unsupervised classification model to forecast risk of instability in  African regions.
+    \item Reduced dimensionality of the data set using Principal Component Analysis.
+    \item  Performed end-to-end analysis on data; exploratory time series analysis, data wrangling, model training and evaluation.  
+  \end{itemize}
+  }
+}
+%\vspace{0.5cm}
+%{\customcvproject{Bayesian Data Analysis }{March 2018 – April %2018}
+%{\begin{itemize}
+%  \itemsep0.5em 
+%  \item 
+%  \item 
+%\end{itemize}
+%}
+%}
+\vspace{0.5cm}
+{\customcvproject{Third year report: \textit{Interpolation methods and their application}}{October 2015 – December 2015}
+{\begin{itemize}
+  \itemsep0.5em 
+  \item Implemented and compared different interpolation methods (spline,polynomials) in MATLAB.Verified validity of comparison outcome by manipulating oceanographic data set.
+\end{itemize}
+}
+}
+\vspace{0.2cm}
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+\vspace{-1.0\baselineskip}
+\section{ADDITIONAL EXPERIENCE}
+%
+{\customcventry{January 2019}{Stanford University}{Deep Learning Specialization}{deeplearning.ai}{}
+{\begin{itemize}
+  \itemsep0.5em 
+  \item Took part of a series of five courses in deep learning; significantly improved understanding of convolutional neural networks and sequence models. 
+%
+  \item Gained experience structuring machine learning projects.
+  \item Improved deep neural network accuracy through efficient hyperparameter tuning, regularization and optimization techniques.
+  \item Successfully implemented the theory into healthcare, autonomous driving and sign language reading projects.   
+\end{itemize}
+}
+\vspace{0.5cm}
+}
+{\customcventry{July 2017}{Wesleyan University}{Python Programming}{Massive Open Online Course}{}
+{\begin{itemize}
+  \itemsep0.5em 
+  \item Learned basic manipulations in the Python language.  
+  \item Practiced efficient data mining techniques through weekly assignments.
+  \item Enhanced data wrangling, descriptive statistical analysis and data visualization.
+%
+\end{itemize}
+}
+\vspace{0.5cm}
+}
+{\customcventry{November 2016}{Stanford University}{Machine Learning}{Massive Open Online Course}{}
+{\begin{itemize}
+  \itemsep0.5em 
+  \item Used predictive analytics such as linear regression, neural networks and support vector machine techniques for both regression and classification task.  
+  \item Implemented supervised and unsupervised learning algorithm in MATLAB (spam filter, digit recognition and sentiment analysis algorithm).
+  \item Gained knowledge in basic Neural Networks architecture,Support Vector Machine and Nearest Neighbour.
+%
+\end{itemize}
+}
+}
+%
+\vspace{0.5cm}
+%{\customcventry{August 2013}{London School of Economics}{Summer course in Economics}{London, United Kingdom}{}
+%{\begin{itemize}
+% \itemsep0.5em 
+% \item Participated in an introductory course in economics; course consisted of lectures, panel discussions and workshops.
+%
+%\end{itemize}
+%}
+%}
+%\vspace{0.3cm}
+%
+%------------------------------------------------------------
+%------------------------------------------------------------
+%
+\vspace{-1.0\baselineskip}
+\section{TECHNICAL COMPETENCES AND COMMUNICATION SKILLS}
+%
+\raggedright
+\begin{parcolumns}{2}
+\colchunk{\centering \textbf{Language}}
+\colchunk{\centering \textbf{Skills}}
+\colplacechunks
+\colchunk{\begin{itemize}\item French (native). \end{itemize}}
+\colchunk{\begin{itemize}\item \textbf{Statistical and numerical modelling} : Advanced knowledge in R and JAGS (Bayesian statistics). Good knowledge of Python and Matlab. \end{itemize}}
+\colplacechunks
+\colchunk{\begin{itemize}\item English (full professional proficiency, C2). \end{itemize}}
+\colchunk{\begin{itemize}\item \textbf{Data mangling and visualisation}: Advanced knowledge of \textit{dplyr} and \textit{ggplot2} libraries for data preparation and visualisation. Good knowledge of \textit{Pandas}, \textit{NumPy} and \textit{Seaborn} for the equivalent in Python.\end{itemize}}
+\colplacechunks
+\colchunk{\begin{itemize}\item German (Limited working proficiency, B2). \end{itemize}}
+\colchunk{\begin{itemize}\item \textbf{Machine and Deep learning frameworks}: Good knowledge of TensorFlow, Keras and scikit-learn libraries. \end{itemize}}
+\colplacechunks
+\colchunk{\begin{itemize}\item Italian (Limited working proficiency, A2). \end{itemize}}
+\colchunk{\begin{itemize}\item \textbf{Version system control (GIT), relational databases and IDE environment}: Familiar with relational database (PostgreSQL,MySQL, IBM Db2), good knowledge of GIT. Proficient user of RStudio, Jupyter Lab and PyCharm Professional. \end{itemize}}
+
+\end{parcolumns}
+
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+
+
+%\section{AWARDS AND ACHIEVEMENTS}
+
+%------------------------------------------------------------
+%------------------------------------------------------------
+%
+\vspace{-1.3\baselineskip}
+\section{REFERENCES}
+Dr.Alexandru Tantar, Group Leader of the Business Analytics team at LIST  (\href{mailto:alexandru.tantar@list.lu}{alexandru.tantar@list.lu}) 
+
+\vspace{0.3cm}
+Dr.Riad Aggoune, Senior Researcher and member of the Business Analytics team at LIST (\href{mailto:riad.aggoune@list.lu}{riad.aggoune@list.lu}) 
+%      
+%      
+}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
